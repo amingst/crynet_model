@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 
+#TODO: Change full_path to just be data dir + subdir + filename
 def build_meta(directory, col_names):
     data = []
     for folder_name in os.listdir(directory):
