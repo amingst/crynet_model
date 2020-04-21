@@ -12,8 +12,7 @@ def build_meta(directory, col_names):
             data.append([file_name, full_path, folder_name])
     
     df = pd.DataFrame(data, columns=col_names)
-    
-    df.to_csv('meta.csv', index=False)    
-    print("Generated metadata file in root directory")
+    df.to_csv('meta.csv', index=False)
 
+    print("Generated metadata file in root directory")
     return None
