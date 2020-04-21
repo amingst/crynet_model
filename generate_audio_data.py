@@ -2,8 +2,7 @@ import pandas as pd
 import librosa
 import numpy as np
 
-#TODO: Rename... possibly
-def load_audio_data(meta_path):
+def generate_audio_data(meta_path):
     audio_data = []
     meta_df = pd.read_csv(meta_path)
 
@@ -18,5 +17,3 @@ def load_audio_data(meta_path):
 
     print("Saved to pickle file in root directory")
     return None
-
-load_audio_data('meta.csv')
