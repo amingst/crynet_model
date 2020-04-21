@@ -14,7 +14,9 @@ def load_audio_data(meta_path):
         audio_data.append([samples, sample_rate, current_row[2]])
 
     df = pd.DataFrame(audio_data, columns=["samples", "sample_rate", "class_label"])
-    df.to_csv('audio_data.csv', index=False)
+    df.to_pickle('audio_data.pkl')
 
-    print("Saved to csv file in root directory")
+    print("Saved to pickle file in root directory")
     return None
+
+load_audio_data('meta.csv')
