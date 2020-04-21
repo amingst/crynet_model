@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 
+#TODO: Refactor to a module folder
 #TODO: Change full_path to just be data dir + subdir + filename
 def build_meta(directory, col_names):
     data = []
@@ -11,4 +12,8 @@ def build_meta(directory, col_names):
             data.append([file_name, full_path, folder_name])
     
     df = pd.DataFrame(data, columns=col_names)
-    return df
+    
+    df.to_csv('meta.csv', index=False)    
+    print("Generated metadata file in root directory")
+
+    return None
