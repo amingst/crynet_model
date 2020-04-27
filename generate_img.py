@@ -1,0 +1,16 @@
+import numpy as np
+import librosa
+import librosa.display
+import matplotlib.pyplot as plt
+
+# TODO: Add Completed Message
+def generate_img(samples, sr):
+    fig = plt.figure(figsize=[4,4])
+    ax = fig.add_subplot(111)
+    ax.axes.get_xaxis().set_visible(False)
+    ax.axes.get_yaxis().set_visible(False)
+    ax.set_frame_on(False)
+    S = librosa.feature.melspectrogram(y=samples, sr=sr)
+    librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
+
+    return fig

@@ -18,5 +18,3 @@ def generate_spectrogram_data(data_path):
 
     print("Saved to pickle file in root directory")
     return None
-
-generate_spectrogram_data('audio_data.pkl')
